@@ -1,9 +1,15 @@
 <script setup>
+import Navbar from './components/navbar.vue';
+
 </script>
 
 <template>
- <h2>Raiyan</h2>
+  <Navbar />
+  <main>
+  <RouterView></RouterView>
+</main>
 </template>
 
 <style scoped>
+
 </style>
