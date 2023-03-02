@@ -1,7 +1,7 @@
 <template>
     <!-- <div class="row"> -->
 
-    <div class="coating">
+    <div class="coating" id="coating-id">
         <router-link class="navbar-logo" to="/"><img src="@/assets/images/home.png" width="32" height="32" /></router-link>
         <router-link class="navbar-logo" to="/about"><img src="/src/assets/images/about.png" width="32" /></router-link>
         <router-link class="navbar-logo" to="/contact"><img src="/src/assets/images/headphones.png"

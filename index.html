@@ -242,9 +242,15 @@ https://cdn.jsdelivr.net/npm/progressbar.js@1.1.0/dist/progressbar.min.js
       // print "false" if direction is down and "true" if up
       console.log(this.oldScroll > this.scrollY);
 
-      if(!this.oldScroll > this.scrollY){
-// const element = document.getElementById('')
+      if (!this.oldScroll > this.scrollY) {
+        const element = document.getElementById('coating-id')
+        element.style = "opacity:0";
       }
+      if (this.oldScroll > this.scrollY) {
+        const element = document.getElementById('coating-id')
+        element.style = "opacity:1";
+      }
+
 
       this.oldScroll = this.scrollY;
     }
