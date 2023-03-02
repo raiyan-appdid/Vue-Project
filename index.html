@@ -6,7 +6,7 @@
   <link rel="icon" href="/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raiyan Vite Project</title>
-  <style>
+  <!-- <style>
     #main-div {
       position: fixed;
       width: 100vw;
@@ -99,19 +99,100 @@
         transform: scale(1.2, 1);
       }
     }
+  </style> -->
+
+
+  <style>
+    /* ----- preloader ----- */
+    /* line 24, ../scss/_markup.scss */
+    .art-preloader {
+      /* margin: 15px; */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100vw);
+      height: calc(100vh);
+      background: #20202a;
+      /* z-index: 999999; */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+
+    /* line 37, ../scss/_markup.scss */
+    .art-preloader .art-preloader-content {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    /* line 41, ../scss/_markup.scss */
+    .art-preloader .art-preloader-content .art-preloader-load {
+      margin-top: 5px;
+      width: 200px;
+    }
+
+    /* line 45, ../scss/_markup.scss */
+    .art-preloader .art-preloader-content .art-preloader-load .progressbar-text {
+      position: relative;
+      font-size: 14px;
+      font-weight: 400 !important;
+      color: #8c8c8e !important;
+      height: 300px;
+      line-height: 350px;
+    }
+
+    /* line 58, ../scss/_markup.scss */
+    .art-preloader-load path:first-child {
+      stroke: #191923;
+    }
+
+    /* line 61, ../scss/_markup.scss */
+    .art-preloader-load path:last-child {
+      stroke: #FFC107;
+    }
   </style>
 </head>
 
 <body>
-  <div id="main-div">
+  <!-- <div id="main-div">
     <div id="loader">
       <div id="shadow"></div>
       <div id="box"></div>
     </div>
+  </div> -->
+
+  <!-- preloader -->
+  <div class="art-preloader" id="preloader-id">
+    <!-- preloader content -->
+    <div class="art-preloader-content">
+      <!-- title -->
+      <h4 class="text-white text-center">Raiyan Memon Here <span>&#128521;</span></h4>
+      <!-- progressbar -->
+      <div class="d-flex justify-content-center">
+        <div id="preloader" class="art-preloader-load text-center"></div>
+      </div>
+    </div>
+    <!-- preloader content end -->
   </div>
+  <!-- preloader end -->
+
   <div id="app"></div>
+  <!-- jquery js -->
+  <!-- anime js -->
+  <script src="
+  https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js
+  "></script>
+  <script src="
+https://cdn.jsdelivr.net/npm/progressbar.js@1.1.0/dist/progressbar.min.js
+"></script>
   <script type="module" src="/src/main.js"></script>
-  <script>
+  <!-- <script>
     var loader = document.getElementById('main-div');
     window.addEventListener('load', function () {
       setTimeout(() => {
@@ -122,7 +203,42 @@
         loader.style = "width:0; height:0";
       }, 1500);
     })
+  </script> -->
+
+  <script>
+    window.addEventListener('load', function () {
+      anime({
+        targets: '.art-preloader',
+        opacity: [1, 0],
+        delay: 2200,
+        duration: 400,
+        easing: 'linear',
+        complete: function (anim) {
+          // $('.art-preloader').css('display', 'none');
+          const preloader = document.getElementById('preloader-id')
+          // console.log(preloader);
+          preloader.style = "display:none;";
+        }
+      });
+    });
+    var bar = new ProgressBar.Line(preloader, {
+      strokeWidth: 1.7,
+      easing: 'easeInOut',
+      duration: 1400,
+      delay: 750,
+      trailWidth: 1.7,
+      svgStyle: {
+        width: '100%',
+        height: '100%'
+      },
+      step: (state, bar) => {
+        bar.setText(Math.round(bar.value() * 100) + ' %');
+      }
+    });
+
+    bar.animate(1);
   </script>
+
 </body>
 
 </html>
