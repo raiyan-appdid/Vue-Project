@@ -1,13 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raiyan Vite Project</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raiyan Vite Project</title>
+  <style>
+    #main-div {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(109.5deg, rgb(13, 11, 136) 9.4%, rgb(86, 255, 248) 165.4%);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 1s ease-out;
+    }
+
+    .hide-loader {
+      display: none;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+
+    #loader {
+      /* Uncomment this to make it run! */
+      /*
+     animation: loader 5s linear infinite; 
+  */
+
+      position: absolute;
+      top: calc(50% - 20px);
+      left: calc(50% - 20px);
+    }
+
+    @keyframes loader {
+      0% {
+        left: -100px
+      }
+
+      100% {
+        left: 110%;
+      }
+    }
+
+    #box {
+      width: 50px;
+      height: 50px;
+      background: #fff;
+      animation: animate .5s linear infinite;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 3px;
+    }
+
+    @keyframes animate {
+      17% {
+        border-bottom-right-radius: 3px;
+      }
+
+      25% {
+        transform: translateY(9px) rotate(22.5deg);
+      }
+
+      50% {
+        transform: translateY(18px) scale(1, .9) rotate(45deg);
+        border-bottom-right-radius: 40px;
+      }
+
+      75% {
+        transform: translateY(9px) rotate(67.5deg);
+      }
+
+      100% {
+        transform: translateY(0) rotate(90deg);
+      }
+    }
+
+    #shadow {
+      width: 50px;
+      height: 5px;
+      background: #000;
+      opacity: 0.1;
+      position: absolute;
+      top: 59px;
+      left: 0;
+      border-radius: 50%;
+      animation: shadow .5s linear infinite;
+    }
+
+    @keyframes shadow {
+      50% {
+        transform: scale(1.2, 1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-div">
+    <div id="loader">
+      <div id="shadow"></div>
+      <div id="box"></div>
+    </div>
+  </div>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+  <script>
+    var loader = document.getElementById('main-div');
+    window.addEventListener('load', function () {
+      setTimeout(() => {
+        loader.classList.add('hide-loader');
+
+      }, 500);
+      setTimeout(() => {
+        loader.style = "width:0; height:0";
+      }, 1500);
+    })
+  </script>
+</body>
+
 </html>
