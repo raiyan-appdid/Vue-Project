@@ -175,7 +175,7 @@
       <h4 class="text-white text-center">Raiyan Memon <span>&#128521;</span></h4>
       <!-- progressbar -->
       <!-- <div class="d-flex justify-content-center"> -->
-        <div id="preloader" class="art-preloader-load text-center"></div>
+      <div id="preloader" class="art-preloader-load text-center"></div>
       <!-- </div> -->
     </div>
     <!-- preloader content end -->
@@ -237,6 +237,18 @@ https://cdn.jsdelivr.net/npm/progressbar.js@1.1.0/dist/progressbar.min.js
     });
 
     bar.animate(1);
+
+    window.onscroll = function (e) {
+      // print "false" if direction is down and "true" if up
+      console.log(this.oldScroll > this.scrollY);
+
+      if(!this.oldScroll > this.scrollY){
+// const element = document.getElementById('')
+      }
+
+      this.oldScroll = this.scrollY;
+    }
+
   </script>
 
 </body>

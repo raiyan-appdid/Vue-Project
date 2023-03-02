@@ -4,10 +4,17 @@ import Navbar from './components/navbar.vue';
 </script>
 
 <template>
-  <Navbar />
-  <main>
-    <RouterView></RouterView>
-  </main>
+  <div class="full-page bg-dark text-white">
+    <Navbar />
+    <main>
+      <RouterView></RouterView>
+    </main>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.full-page {
+  /* width: 100vw; */
+  height: 100vh;
+}
+</style>
