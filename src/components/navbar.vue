@@ -2,10 +2,10 @@
     <!-- <div class="row"> -->
 
     <div class="coating" id="coating-id">
-        <router-link class="navbar-logo" to="/"><img src="@/assets/images/home.png" width="32" height="32" /></router-link>
-        <router-link class="navbar-logo" to="/about"><img src="/src/assets/images/about.png" width="32" /></router-link>
-        <router-link class="navbar-logo" to="/contact"><img src="/src/assets/images/headphones.png"
-                width="32" /></router-link>
+        <router-link class="navbar-logo" to="/"><i class="fa-solid fa-house"></i></router-link>
+        <router-link class="navbar-logo" to="/about"><i class="fa-solid fa-circle-info"></i></router-link>
+        <router-link class="navbar-logo" to="/contact"><i class="fa fa-phone"></i></router-link>
+        <router-link class="navbar-logo" to="/asdf"><i class="fa fa-graduation-cap"></i></router-link>
     </div>
 
 

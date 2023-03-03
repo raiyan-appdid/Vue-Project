@@ -7,8 +7,8 @@
 <template>
     <div class="full">
         <div class="container-fluid bg-dark text-white">
-            <div class="container">
-                <div class="row py-5 d-flex justify-content-center align-items-center">
+            <div class="contaier">
+                <div class="row p-5 d-flex justify-content-center align-items-center">
                     <div class="col-md-4 pt-5">
                         <div class="row">
                             <div class="col-md-12 text-left">
@@ -24,15 +24,15 @@
                     <div class="col-md-4 py-5 text-center">
                         <div class="row justify-content-center">
                             <div class="col-md-2 col-2">
-                                <a href="" class="logo" title="LinkedIn"> <img src="@/assets/images/linkedin.png"
+                                <a href="https://in.linkedin.com/in/raiyan-memon" target="_blank" class="logo" title="LinkedIn"> <img src="@/assets/images/linkedin.png"
                                         width="80%" alt=""></a>
                             </div>
                             <div class="col-md-2 col-2">
-                                <a href="" class="logo" title="GitHub"> <img src="@/assets/images/github1.png" width="80%"
+                                <a href="https://github.com/Raiyan-Memon" target="_blank" class="logo" title="GitHub"> <img src="@/assets/images/github1.png" width="80%"
                                         alt=""></a>
                             </div>
                             <div class="col-md-2 col-2">
-                                <a href="" class="logo" title="Instagram"><img src="@/assets/images/instagram.png"
+                                <a href="https://www.instagram.com/raiyan_memon/" target="_blank" class="logo" title="Instagram"><img src="@/assets/images/instagram.png"
                                         width="80%" alt=""></a>
                             </div>
                             <div class="col-md-2 col-2">

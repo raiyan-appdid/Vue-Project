@@ -1,6 +1,10 @@
-.router-link-exact-active {
+.router-link-exact-active i{
     border: 5px solid white;
+    padding: 5px;
     border-radius: 50%;
+    background-color: white;
+    transition-timing-function: ease-out;
+    /* transition: 0.5s; */
 }
 /* nav ul{
     all: unset
@@ -32,22 +36,29 @@ nav {
     border-radius: 30px;
     text-align: center;
     width: 300px;
-    padding: 5px;
+    padding: px;
     background-color: black;
     opacity: 1;
 }
 .navbar-logo{
     display: inline-block;
+    color: #289cff;
+    /* height: 32px;
+    width: 32px; */
+}
 
+.navbar-logo:hover{
+    color: #7cc3ff;
 }
 
 .coating a {
     margin: 10px;
     padding: 5px;
+    
 }
 .coating a:hover{
-    border: 5px solid white;
-    border-radius: 50%;
+    /* border: 5px solid white;
+    border-radius: 50%; */
 }
 
 /* .coating a img:hover{
