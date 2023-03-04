@@ -15,6 +15,6 @@ import Navbar from './components/navbar.vue';
 <style scoped>
 .full-page {
   /* width: 100vw; */
-  height: 100vh;
+  height: 95vh;
 }
 </style>
