@@ -28,11 +28,12 @@ nav {
 
 .coating{
     display: block;
-    position: fixed;
+    /* position: absolute; */
     margin: 0 auto;
+    /* top: 12px; */
     left: 0;
     right: 0;
-    bottom: 10px;
+    /* bottom: 10px; */
     border-radius: 30px;
     text-align: center;
     width: 300px;

@@ -1,12 +1,13 @@
 <template>
     <!-- <div class="row"> -->
-
+    <!-- <div class="mt-4"> -->
     <div class="coating" id="coating-id">
         <router-link class="navbar-logo" to="/"><i class="fa-solid fa-house"></i></router-link>
         <router-link class="navbar-logo" to="/about"><i class="fa-solid fa-circle-info"></i></router-link>
         <router-link class="navbar-logo" to="/contact"><i class="fa fa-phone"></i></router-link>
         <router-link class="navbar-logo" to="/asdf"><i class="fa fa-graduation-cap"></i></router-link>
     </div>
+    <!-- </div> -->
 
 
     <!-- </div> -->
