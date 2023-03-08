@@ -18,7 +18,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 py-5 text-center">
+                    <div class="col-md-3 py-5 text-center">
                         <img src="@/assets/images/Raiyan.png" width="70%" alt="no">
                     </div>
                     <div class="col-md-4 py-5 text-center">
